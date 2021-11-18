@@ -12,7 +12,7 @@ Open [http://localhost:3000] to view it in the browser.
 
 ### Search Page
 
-In search page ("/") a random list of images is displayed automatically.
+In SearchPage ("/") a random list of images is displayed automatically.
 
 You can use the search bar to search images on Unsplash API.
 
@@ -20,7 +20,7 @@ Press the favorite button to save it in your collection.
 
 ### Favorites Page
 
-Here the images that you have saved as favorites will be shown.
+In FavoritePage ("/favorites") the images that you have saved as favorites will be shown.
 
 You can press the favorite button for delete it from your collection.
 
