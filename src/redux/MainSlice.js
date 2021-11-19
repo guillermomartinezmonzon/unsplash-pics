@@ -1,8 +1,10 @@
-// Data Examples for testing
-
-import { IDexample, initialStateExample } from "../data/Examples";
-
 import { createSlice } from "@reduxjs/toolkit";
+import {
+  loadLocal,
+  loadLocalID,
+  saveLocal,
+  saveLocalID,
+} from "../data/LocalStorage";
 
 export const MainSlice = createSlice({
   name: "listimages",
@@ -104,38 +106,6 @@ function compareHeigth(a, b) {
     return 1;
   }
   return 0;
-}
-
-/// LocalStorage (Favorites) ///
-export function saveLocal(array) {
-  localStorage.setItem("state", JSON.stringify(array));
-}
-
-export function loadLocal() {
-  try {
-    if (!localStorage.getItem("state")) {
-      saveLocal([]); // replace with initialStateExample for testing
-    }
-    return JSON.parse(localStorage.getItem("state"));
-  } catch (e) {
-    console.log(e);
-  }
-}
-
-/// LocalStorage (IDs) ///
-export function saveLocalID(array) {
-  localStorage.setItem("ids", JSON.stringify(array));
-}
-
-export function loadLocalID() {
-  try {
-    if (!localStorage.getItem("ids")) {
-      saveLocalID([]); // replace with IDexample for testing
-    }
-    return JSON.parse(localStorage.getItem("ids"));
-  } catch (e) {
-    console.log(e);
-  }
 }
 
 export const {
