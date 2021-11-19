@@ -144,17 +144,17 @@ export const SearchPage = () => {
     );
   } else {
     return (
-      <div style={{ maxWidth: 800, align: "center" }}>
-        <NavMain
-          searchText={searchText}
-          setSearchText={setSearchText}
-          handleSearch={handleSearch}
-          link="/favorites"
-        />
-        <center>
+      <center>
+        <div style={{ maxWidth: 800, align: "center" }}>
+          <NavMain
+            searchText={searchText}
+            setSearchText={setSearchText}
+            handleSearch={handleSearch}
+            link="/favorites"
+          />
           <h2>Loading... </h2>
-        </center>
-      </div>
+        </div>
+      </center>
     );
   }
 };

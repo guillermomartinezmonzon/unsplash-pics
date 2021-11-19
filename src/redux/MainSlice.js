@@ -1,9 +1,6 @@
 // Data Examples for testing
 
-// import {
-//   IDexample,
-//   initialStateExample,
-// } from "../data/Examples";
+import { IDexample, initialStateExample } from "../data/Examples";
 
 import { createSlice } from "@reduxjs/toolkit";
 
@@ -28,11 +25,9 @@ export const MainSlice = createSlice({
     deleteOne: (state, action) => {
       const indexID = state.listIDs.indexOf(action.payload.id);
       const index = state.listFavorites.indexOf(action.payload.id);
-      const indexDate = state.dateIDs.indexOf(action.payload.id);
       if (indexID < 0) {
         alert("pic not found");
       } else {
-        state.dateIDs.splice(indexDate, 1);
         state.listFavorites.splice(index, 1);
         state.listIDs.splice(indexID, 1);
         saveLocal(state.listFavorites);
@@ -119,7 +114,7 @@ export function saveLocal(array) {
 export function loadLocal() {
   try {
     if (!localStorage.getItem("state")) {
-      saveLocal([]); // replace with initialStateExample
+      saveLocal([]); // replace with initialStateExample for testing
     }
     return JSON.parse(localStorage.getItem("state"));
   } catch (e) {

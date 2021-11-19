@@ -162,17 +162,17 @@ export const FavoritePage = () => {
     );
   } else {
     return (
-      <div style={{ maxWidth: 800, align: "center" }}>
-        <NavMain
-          searchText={searchText}
-          setSearchText={setSearchText}
-          link="/"
-        />
-        <center>
+      <center>
+        <div style={{ maxWidth: 800, align: "center" }}>
+          <NavMain
+            searchText={searchText}
+            setSearchText={setSearchText}
+            link="/"
+          />
           <h2>Favorite pictures not added yet... </h2>
           <h1>:(</h1>
-        </center>
-      </div>
+        </div>
+      </center>
     );
   }
 };
