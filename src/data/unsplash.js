@@ -1,6 +1,6 @@
 import { createApi } from "unsplash-js";
 
-const apiAccess = "LFQVftkUrwtQdCcPnaKZIBVBf75uxrGZS0JyUQFJ7YM";
+const apiAccess = "";
 
 export const unsplash = createApi({
   accessKey: apiAccess,
